@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap");
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+  min-height: 100vh;
+  background-color: #ada89c;
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+h1 {
+  letter-spacing: 2px;
+  margin: 0;
+}
+
+#contador {
+  display: flex;
+}
+
+p {
+  margin: 20px 0 30px;
+}
+
+#numeroAtual {
+  margin: 0 30px;
+  font-size: 40px;
+}
+
+button {
+  width: 45px;
+  font-size: 1.5rem;
+  border-radius: 20%;
+  border: 2px solid;
+}
+
+button:hover {
+  background-color: red;
+  color: whitesmoke;
+}
+
+.clicked {
+  background-color: red;
+  color: whitesmoke;
+}
+
+.dica {
+  width: 300px;
+  margin-top: 30px;
+  background-color: rgb(225, 225, 208);
+  padding: 10px;
+  border: 1px dotted black;
+  text-align: center;
+}

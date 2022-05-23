@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400&display=swap");
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #ada89c;
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+.input-tarefa,
+.btn-adicionar {
+  font-size: 1.1rem;
+  border-radius: 10px;
+  border: 2px solid #ada89c;
+  padding: 10px;
+  outline: none;
+}
+
+.btn-adicionar {
+  cursor: pointer;
+  background-color: rgb(101, 49, 138);
+  color: whitesmoke;
+}
+
+.btn-adicionar:hover {
+  background-color: rgb(75, 35, 103);
+}
+
+#listaTarefas {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+  width: 100%;
+  max-width: 600px;
+}
+
+.itens-lista {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+input[type="checkbox"] {
+  transform: scale(2);
+  margin-right: 15px;
+  color: rgb(55, 0, 127);
+  font-size: 1.2rem;
+}
+
+label {
+  color: rgb(55, 0, 127);
+  font-size: 1.2rem;
+}
+
+input[type="checkbox"]:checked + label {
+  color: #333;
+  text-decoration: line-through;
+}

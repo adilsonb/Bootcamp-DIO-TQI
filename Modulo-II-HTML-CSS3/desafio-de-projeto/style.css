@@ -1,0 +1,402 @@
+@import url("https://fonts.googleapis.com/css2?family=Zen+Loop&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  color: whitesmoke;
+  font-family: "Zen Loop", cursive;
+}
+
+/* --- HEADER --- */
+.header-wrapper {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background: #000428;
+  background: linear-gradient(to right, #004e92, #000428);
+  background-size: 400% 400%;
+  animation: backgroundTransition 8s ease-in-out infinite;
+}
+
+@keyframes backgroundTransition {
+  0% {
+    background-position: 0 80%;
+  }
+  50% {
+    background-position: 80% 100%;
+  }
+  100% {
+    background-position: 0 80%;
+  }
+}
+
+h1,
+h2 {
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+
+.social-media {
+  display: flex;
+  flex-direction: column;
+}
+
+.social-media a {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 1.4rem;
+  align-items: center;
+  text-decoration: none;
+  border: 1px solid whitesmoke;
+  color: whitesmoke;
+  padding: 15px;
+  letter-spacing: 2px;
+  margin: 10px 10px;
+  min-width: 6rem;
+  transition: 0.5s cubic-bezier(0.55, 0.025, 0.675, 0.97);
+}
+
+.social-media a:hover {
+  background-color: #232b4d;
+}
+
+/* --- MENU HAMBÚRGUER --- */
+.checkbox-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.checkbox {
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 9999;
+  transition: 400ms ease-in-out 0s;
+}
+
+.checkbox .trace {
+  width: 50px;
+  height: 2px;
+  background-color: whitesmoke;
+  position: absolute;
+  border-radius: 4px;
+  transition: 0.5s ease-in-out;
+}
+
+.checkbox .trace:nth-child(1) {
+  top: 26px;
+  transform: rotate(0);
+}
+
+.checkbox .trace:nth-child(2) {
+  top: 46px;
+  transform: rotate(0);
+}
+
+.checkbox .trace:nth-child(3) {
+  top: 66px;
+  transform: rotate(0);
+}
+
+#toggle {
+  display: none;
+}
+
+/* --- ANIMAÇÃO DO MENU HAMBÚRGUER --- */
+
+#toggle:checked + .checkbox .trace:nth-child(1) {
+  transform: rotate(45deg);
+  top: 47px;
+}
+
+#toggle:checked + .checkbox .trace:nth-child(2) {
+  transform: translateX(-100px);
+  width: 30px;
+  visibility: hidden;
+  top: 47px;
+  opacity: 0;
+}
+
+#toggle:checked + .checkbox .trace:nth-child(3) {
+  transform: rotate(-45deg);
+  top: 47px;
+}
+
+/* --- MENU --- */
+
+.menu {
+  position: absolute;
+  top: 28px;
+  right: 30px;
+  background: transparent;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 0 whitesmoke;
+  z-index: -1;
+  transition: 400ms ease-in-out 0s;
+}
+
+.menu-itens {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  opacity: 0;
+  visibility: hidden;
+  transition: 400ms ease-in-out 0s;
+}
+
+.menu-itens ul {
+  list-style-type: none;
+}
+
+.menu-itens li {
+  padding: 15px 0;
+}
+
+.menu-itens ul li a {
+  color: whitesmoke;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-size: 40px;
+}
+
+.menu-itens li:hover {
+  transform: scale(1.1);
+}
+
+/* --- ANIMAÇÃO DO MENU --- */
+
+#toggle:checked + .checkbox {
+  background-color: #4169e1;
+}
+
+#toggle:checked ~ .menu {
+  box-shadow: 0 0 0 100vmax #4169e1;
+  z-index: 1;
+}
+
+#toggle:checked ~ .menu-itens {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* --- CARDS --- */
+
+.container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 0 0 3rem;
+}
+
+.container h2 {
+  font-size: 2.5rem;
+  color: rgb(109, 109, 109);
+  letter-spacing: 1px;
+}
+
+.card-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 90%;
+}
+
+.container .card-container:nth-child(1),
+.container .card-container:nth-child(3) {
+  flex-direction: column-reverse;
+}
+
+.card {
+  height: 225px;
+  width: 300px;
+  margin: 3rem 0 0 0;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  filter: grayscale(0.5);
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.port-01 {
+  background-image: url(https://picsum.photos/id/1022/480/640.jpg);
+}
+
+.port-02 {
+  background-image: url(https://picsum.photos/id/1074/480/640.jpg);
+}
+
+.port-03 {
+  background-image: url(https://picsum.photos/id/124/480/640.jpg);
+}
+
+.card-text {
+  width: 90%;
+  font-family: sans-serif;
+  letter-spacing: 1px;
+  color: rgb(109, 109, 109);
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.card-wrapper {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.card-wrapper::before {
+  content: "";
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  display: block;
+  border: 1px solid white;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.card-wrapper h2 {
+  font-size: 40px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  margin: 0;
+  transition: 0.3s;
+  color: whitesmoke;
+}
+
+.card-wrapper p {
+  font-size: 0;
+  visibility: hidden;
+  opacity: 0;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: 0.3s;
+}
+
+.card:hover {
+  filter: unset;
+}
+
+.card:hover > .card-wrapper::before {
+  height: 180px;
+  width: 250px;
+  opacity: 1;
+}
+
+.card:hover > .card-wrapper p {
+  opacity: 1;
+  visibility: visible;
+  font-size: 14px;
+  color: whitesmoke;
+}
+
+.sobre {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  letter-spacing: 1px;
+  color: rgb(109, 109, 109);
+  margin-top: 30px;
+}
+
+.sobre h2 {
+  font-size: 2.5rem;
+}
+
+.sobre p {
+  width: 90%;
+  justify-content: center;
+  font-family: sans-serif;
+}
+
+/* --- FOOTER --- */
+
+.footer {
+  width: 100%;
+  height: 100px;
+  background-color: #000428;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+}
+
+/* --- BREAKPOINT --- */
+
+@media screen and (min-width: 800px) {
+  .social-media {
+    margin-top: 1rem;
+    flex-direction: unset;
+  }
+
+  .card-container {
+    flex-direction: unset;
+  }
+
+  .container .card-container:nth-child(1),
+  .container .card-container:nth-child(3) {
+    flex-direction: unset;
+  }
+
+  .card {
+    height: 300px;
+    width: 400px;
+  }
+
+  .card:hover > .card-wrapper::before {
+    height: 250px;
+    width: 300px;
+    opacity: 1;
+  }
+
+  .card:hover > .card-wrapper p {
+    font-size: 24px;
+  }
+
+  .card-text {
+    text-align: justify;
+  }
+
+  .port-01,
+  .port-03 {
+    margin-left: 40px;
+  }
+
+  .port-02 {
+    margin-right: 40px;
+  }
+}
