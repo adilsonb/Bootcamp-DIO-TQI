@@ -10,7 +10,7 @@ function comparaNumeros(valor1, valor2) {
     if (num1 === num2) {
       textoSaoIguais = "iguais";
     } else {
-      textoSaoIguais = `diferentes`;
+      textoSaoIguais = "diferentes";
     }
 
     let somaNumeros = num1 + num2;
