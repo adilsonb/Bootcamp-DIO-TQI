@@ -12,7 +12,7 @@ Exemplo:
 alunosAprovados(alunos, 6);
 ```
 
-```
+```js
 const alunos = [
   {
     aluno: "Adilson",
@@ -35,7 +35,6 @@ const alunos = [
     nota: 3,
   },
 ];
-
 ```
 
 Resultado:
