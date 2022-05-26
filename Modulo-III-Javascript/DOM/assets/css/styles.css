@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap");
+
+body {
+  margin: 0;
+  font-family: "Titillium Web", sans-serif;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  background-color: #c3c3c3;
+}
+
+h1 {
+  font-size: 1.5rem;
+}
+
+button {
+  border-radius: 20px;
+  padding: 10px 20px;
+  border: none;
+  background-color: purple;
+  color: white;
+}
+
+button:hover {
+  background-color: rgb(93, 21, 93);
+}
+
+footer {
+  width: 100%;
+  background-color: #b0b0b0;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  font-size: 0.8rem;
+  padding: 10px 0;
+}
+
+main.dark-mode {
+  background-color: #333;
+  color: whitesmoke;
+}
+
+button.dark-mode {
+  background-color: orangered;
+}
+
+button.dark-mode:hover {
+  background-color: rgb(147, 70, 42);
+}
+
+footer.dark-mode {
+  background-color: rgb(34, 32, 32);
+  color: rgb(162, 98, 2);
+}
