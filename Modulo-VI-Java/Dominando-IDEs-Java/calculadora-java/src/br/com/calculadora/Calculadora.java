@@ -18,10 +18,10 @@ public class Calculadora {
 			int multiplicacao = multiplicacao(a,b);
 			float divisao = divisao(a,b);
 			
-			System.out.println("A soma de " + a + " + " + b + " È: " + soma);
-			System.out.println("A subtracao de " + a + " - " + b + " È: " +  subtracao);
-			System.out.println("A multiplicaÁ„o de " + a + " x " + b + " È: " +  multiplicacao);
-			System.out.println("A divis„o de " + a + " / " + b + " È: " + divisao);
+			System.out.println("A soma de " + a + " + " + b + " √©: " + soma);
+			System.out.println("A subtra√ß√£o de " + a + " - " + b + " √©: " +  subtracao);
+			System.out.println("A multiplica√ß√£o de " + a + " x " + b + " √©: " +  multiplicacao);
+			System.out.println("A divis√£o de " + a + " / " + b + " √©: " + divisao);
 		}
 		
 		
